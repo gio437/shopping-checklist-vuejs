@@ -1,0 +1,129 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  position: absolute; /* center the page */
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  zoom: 2; /* Adjust the zoom factor to increase or decrease size, current zoom allows for great readbility at most resolutions */
+}
+
+#app {
+  /* black text on a white background with a surronding darker background allows for clean readability */
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* create scrollable sections for all lists */
+ul {
+  /* this max height allows for useful scrolling while still displaying parts of the list without scrolling */
+  max-height: 11rem;
+  overflow-y: auto;
+}
+
+li {
+  margin-left: 1rem;
+}
+
+/* seperate the second and moreItems content list */
+.generalContentList, .groceryList {
+  margin-bottom: 20px;
+}
+
+.groceryList {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Styling for the grocery list */
+form {
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.inputArea {
+  display: flex;
+  gap: 0.3rem;
+  margin-top: 1.2rem;
+}
+
+.groceryContent {
+  margin-top: 10px;
+}
+
+/* Styling for the moreItems list */
+.moreItems {
+  margin-bottom: 10px;
+}
+
+#listTitles {
+  font-weight: bold;
+}
+
+.add-delete button {
+  font-size: 18px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  /* button colors offer common distinction in function */
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}
+
+.add-delete button.delete {
+  background-color: #f44336;
+  font-size: 16px;
+}
+
+.addInputtedTextBtn {
+  font-size: 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  margin-bottom: 0.6rem;
+}
+
+/* for grocery list delete button */
+.deleteNewItem {
+  font-size: 12px;
+  margin-left: 5px;
+  cursor: pointer;
+  border: none;
+  background-color: #f44336;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+}

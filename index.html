@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Grocery Shopping Checklist</title>
+    <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
+    <!-- Import Styles -->
+    <link rel="stylesheet" href="./assets/styles.css" />
+    <!-- Import Vue.js -->
+    <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <h1 class="title">Grocery Shopping Checklist</h1>
+    <div id="app">
+      <div class="generalContentList">
+        <ul>
+          <p id="listTitles">Stores</p>
+          <li v-for="generalContentList in generalContentList">{{generalContentList}}</li>
+        </ul>
+      </div>
+      <div class="groceryList">
+        <ul>
+          <p id="listTitles">Grocery List</p>
+          <!--Input text box to add to list-->
+          <form @submit.prevent="submitNewItems()">
+            <label for="groceryTextBox">Add Item:</label>
+            <div class="inputArea">
+              <input placeholder="New Item" type="text" ref="input" id="groceryTextBox" groceryTextBox="groceryTextBox">
+              <button class="addInputtedTextBtn" @click="submitNewItems">Enter</button>
+          </div>
+            <!-- create id that will correspond with the content item so that it is removable -->
+            <div class="groceryContent">
+              <!-- index defines the relationship between the text and the delete button in the below line -->
+              <li v-for="(groceryList, index) in groceryList" :id="index" >{{groceryList}} <button :id='index' class="deleteNewItem" @click="deleteNewlyDefinedItems(`${index}`)">&#128465;</button></li>
+            </div>
+          </form>
+        </ul>
+        <!--Create difference in content-->
+        <ul>
+          <div class="moreItems">
+            <!-- group identical desired attributes into one id (total) -->
+            <p id="listTitles">How many dozen eggs?</p>
+            <p for="thirdListCount in thirdListCount">Total = {{thirdListCount}}</p>
+          </div>
+          <div class="add-delete">   <!-- change paramater to desired item -->
+            <button class="add" for="thirdListCount in thirdListCount" @click="addItems(thirdListCount + 1 + ' dozen eggs!')">+</button>
+            <button class="delete" @click="deleteMoreItems()">&#128465;</button>
+          </div>
+          <li v-for="moreItems in moreItems">{{moreItems}}</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Import Js -->
+    <script src="./main.js"></script>
+    <!-- Mount App -->
+    <script>
+      const mountedApp = app.mount('#app')
+    </script>
+  </body>
+</html>
