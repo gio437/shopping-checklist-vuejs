@@ -5,7 +5,7 @@
     <title>Grocery Shopping Checklist</title>
     <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
     <!-- Import Styles -->
-    <link rel="stylesheet" href="./assets/styles.css" />
+    <link rel="stylesheet" href="./styles/styles.css" />
     <!-- Import Vue.js -->
     <script src="https://unpkg.com/vue@3.0.0-beta.12/dist/vue.global.js"></script>
   </head>
@@ -31,7 +31,10 @@
             <!-- create id that will correspond with the content item so that it is removable -->
             <div class="groceryContent">
               <!-- index defines the relationship between the text and the delete button in the below line -->
-              <li v-for="(groceryList, index) in groceryList" :id="index" >{{groceryList}} <button :id='index' class="deleteNewItem" @click="deleteNewlyDefinedItems(`${index}`)">&#128465;</button></li>
+              <div id="listItem"  v-for="(groceryList, index) in groceryList">
+                <li :id="index">{{groceryList}}</li>
+                <button :id='index' class="deleteNewItem" @click="deleteNewlyDefinedItems(`${index}`)">&#128465;</button>
+              </div>
             </div>
           </form>
         </ul>
