@@ -4,6 +4,8 @@ Welcome to the Grocery Shopping Checklist project! This simple web application h
 
 The application is structured in 3 different parts, with 1 content list seperated and 2 content lists adjacent to each other each with their own unique characteristics. The apps functionality was created using Vue.JS.
 
+Check preview: https://gio437.github.io/shopping-checklist-vuejs/
+
 ## Features
 
 - **List of Stores:** Easily view  your preferred stores for grocery shopping.
