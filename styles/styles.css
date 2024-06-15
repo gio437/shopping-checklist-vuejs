@@ -34,7 +34,7 @@ h1 {
 
 ul {
   max-height: 11rem;
-  overflow: scroll;
+  overflow-y: auto;
 }
 
 li {
