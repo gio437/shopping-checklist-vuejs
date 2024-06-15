@@ -11,6 +11,7 @@ body {
   color: #333;
   line-height: 1.6;
   zoom: 2;
+  overflow: scroll;
 }
 
 #app {
@@ -144,6 +145,7 @@ input {
 
   ul {
     max-height: 8rem;
+    overflow: scroll;
   }
 
   .add-delete button, .addInputtedTextBtn, .deleteNewItem {
